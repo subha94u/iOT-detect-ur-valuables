@@ -1,0 +1,93 @@
+<nav class="nav">
+  <a class="nav-link active" href="./">Connected Devices</a>
+  <a class="nav-link" href="./lodge-a-claim">Lodge a Claim</a>
+  <a class="nav-link" href="./claim">Claim Status</a>
+  <a class="nav-link disabled" href="#">Reports</a>
+</nav>
+<h3 class="header">Connected Devices</h3>
+<div class="container">
+  <span class="link">
+    <input type="checkbox" class="form-check-input" id="exampleCheck3" [checked]="selected" (change)="selected = !selected"> KBC insured devices
+  </span>
+  <span class="link refresh"><a (click)="refreshFn()">Refresh</a></span>
+</div>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-dark" (click)="deviceDetails()" *ngIf="refresh">
+    Refrigerator
+    <span class="last-connected">Last Connected on 2nd Sep 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-success">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light" (click)="deviceDetails()" *ngIf="refresh">
+    Smart Door
+    <span class="last-connected">Last Connected on 2nd Aug 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-dark" (click)="deviceDetails()" *ngIf="refresh">
+    Smart TV
+    <span class="last-connected">Last Connected on 10th Sep. 2022 </span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light" (click)="deviceDetails()" *ngIf="refresh">
+    Washing Machine
+    <span class="last-connected">Last Connected on 12nd Sep. 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-dark" (click)="deviceDetails()">
+    Air conditioner
+    <span class="last-connected">Last Connected on 13th Sep. 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-warning">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light" (click)="deviceDetails()" *ngIf="!selected">
+    CC TV Camera
+    <span class="last-connected">Last Connected on 30th Aug. 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-dark" (click)="deviceDetails()" *ngIf="!selected">
+    Dishwasher
+    <span class="last-connected">Last Connected on 15th Sep. 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-success">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light" (click)="deviceDetails()" *ngIf="!selected">
+    Microwave
+    <span class="last-connected">Last Connected on 12th Aug. 2022</span>
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+</ul>
+<div class="container">
+  <span class="status-btn">
+    <button type="button" class="btn btn-success">
+    </button>&nbsp;Active
+  </span>
+  <span class="status-btn">
+    <button type="button" class="btn btn-danger">
+    </button>&nbsp;Inactive
+  </span>
+  <span class="status-btn">
+    <button type="button" class="btn btn-warning">
+    </button>&nbsp;Unstable
+  </span>
+</div>

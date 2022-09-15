@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DeviceListComponent } from './device-list/device-list.component';
+import {SupportedDevicesComponent} from './supported-devices/supported-devices.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { ChartbarChartComponent } from './chartbar-chart/chartbar-chart.component';
+import { DeviceDetailsComponent } from './device-details/device-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DeviceListComponent,
+    SupportedDevicesComponent,
+    ChartbarChartComponent,
+    DeviceDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

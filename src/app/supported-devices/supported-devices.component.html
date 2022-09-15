@@ -1,0 +1,81 @@
+<nav class="nav">
+  <a class="nav-link" href="./">Connected Devices</a>
+  <a class="nav-link active" href="./lodge-a-claim">Lodge a Claim</a>
+  <a class="nav-link" href="./claim">Claim Status</a>
+  <a class="nav-link disabled" href="#">Reports</a>
+</nav>
+<div class="alert alert-success" role="alert" *ngIf="alert">
+  Success! Submitted the claim.
+</div>
+<h3 class="header">Lodge a Claim</h3>
+<div class="insured-img">
+  <img src="./assets/insured.png" />
+</div>
+<label for="claim" class="other-items">Claim Type:  </label>
+<select name="claim" id="claim">
+  <option value="glass">Broken glass building</option>
+  <option value="Earthquake">Earthquake building</option>
+  <option value="Fire">Fire building</option>
+  <option value="Flood">Flood building</option>
+  <option value="Storm">Storm building</option>
+  <option value="Water">Water damage building</option>
+  <option value="Theft">Theft</option>
+</select>
+<p class="other-items">Incident Date:
+  <input class="other-items" type="date">
+</p>
+<p class="other-items">Attach Police Complain Report:
+  <input class="other-items" type="file" accept="image/png, image/jpeg">
+</p>
+
+<p class="other-items">List of Insured Devices:</p>
+<ul class="list-group">
+  <li class="list-group-item list-group-item-dark">
+    <input type="checkbox" class="form-check-input" id="exampleCheck2">
+    CC TV Camera
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light">
+    <input type="checkbox" class="form-check-input" id="exampleCheck3">
+    Washing Machine
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-dark">
+    <input type="checkbox" class="form-check-input" id="exampleCheck4">
+    Smart Door
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-light">
+    <input type="checkbox" class="form-check-input" id="exampleCheck5">
+    Microwave
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+  <li class="list-group-item list-group-item-dark">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    Air conditioner
+    <span class="status-btn">
+      <button type="button" class="btn btn-danger">
+      </button>
+    </span>
+  </li>
+</ul>
+<p class="other-items">Comments:</p>
+<textarea>
+
+</textarea>
+<p class="other-items submit-btn">
+  <button type="button" class="btn btn-primary" (click)="submitClaim()">Submit</button>
+</p>
+
