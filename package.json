@@ -2,11 +2,7 @@
   "name": "home-device-detection",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "node index.js",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "node index.js"
   },
   "private": true,
   "dependencies": {
